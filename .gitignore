@@ -1,32 +1,70 @@
-# Prerequisites
-*.d
-
 # Compiled Object files
-*.slo
-*.lo
 *.o
+*.os
+*.ko
 *.obj
 
 # Precompiled Headers
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# Source Files for cpp
+main.cpp
+#*.c++
 
 # Executables
 *.exe
 *.out
 *.app
+
+# Libray Files
+*.o
+*.a
+*.dll
+*.dylib
+*.so
+*.tex
+
+# Build directory
+build/
+bin/
+tests/bin
+
+# CMake build directory
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+cmake_install.cmake
+CTestTestfile.cmake
+#Makefile
+#CMakeLists.txt
+
+# IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.sln
+*.user
+*.ncb
+*.sdf
+*.opensdf
+
+# gitignore file
+o*.gitignore
+
+# Prerequisites
+*.d
+.DS_Store
+CMakefile.txt
+.clangd
+compile_commands.json
+.dir-locals.el
+.envrc
+*.pdf
+.cache/*.*
+dependencies
+src/logs/
+lib_docs/latex
+lib_docs/html
+.cache/clangd/index
+tests/test
