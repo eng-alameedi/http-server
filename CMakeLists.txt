@@ -29,7 +29,7 @@ endif()
 add_executable(${Bin_name} ${SOURCES})
 # Specify the .h source director for the library
 #target_include_directories(${lib_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
-
+target_include_directories(${Bin_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 # Set the Compiler Flags options for release and debug
 if(CMAKE_BUILD_TYPE MATCHES Release)
   target_compile_options(${lib_name} INTERFACE -O3 -DNDEBUG)
@@ -38,11 +38,13 @@ elseif(CMAKE_BUILD_TYPE MATCHES Debug)
 endif()
 
 # Install the library to a directory depend on build type (Release/Debug)
-install(TARGETS ${lib_name}
-  EXPORT ${lib_name}-targets
-  ARCHIVE DESTINATION ${CMAKE_BINARY_DIR}/$<CONFIG>/lib
+#install(TARGETS ${lib_name}
+#  EXPORT ${lib_name}-targets
+#  ARCHIVE DESTINATION ${CMAKE_BINARY_DIR}/$<CONFIG>/lib
+#)
+install(TARGETS ${Bin_name}
+  DESTINATION ${CMAKE_BINARY_DIR}/$<CONFIG>/bin
 )
-
 # Install the Header Files
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/src/include
   DESTINATION ${CMAKE_BINARY_DIR}/$<CONFIG>
