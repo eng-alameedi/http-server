@@ -2,9 +2,11 @@
 #define _HTTP_SERVER_H_
 
 //! Declare the Standard Library
+#include <cstring>
+#include <string>
+
 #include <netinet/in.h>
 #include <sys/socket.h>
-
 //! Function to create the connection socket
 void create_socket();
 
