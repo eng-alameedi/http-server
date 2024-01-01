@@ -3,4 +3,11 @@
 #include <cstring>
 #include <iostream>
 
-//! code here
+#include <sys/socket.h>
+
+int create_socket()
+{
+  int ServerSocket{};
+  ServerSocket = socket(AF_INET, SOCK_STREAM, 0);
+  return ServerSocket;
+}
