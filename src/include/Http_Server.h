@@ -8,7 +8,7 @@
 #include <netinet/in.h>
 #include <sys/socket.h>
 //! Function to create the connection socket
-void create_socket();
+int create_socket();
 
 //! Function to bind to the connection socket
 void bind_socket();
