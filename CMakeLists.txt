@@ -10,7 +10,7 @@ project(HttpServer    VERSION 1.0.0
 #set(lib_name vector2d)
 set(Bin_name HttpServer)
 # find all the .cpp file within the src/lib directory
-file(GLOB SOURCES src/*.cpp)
+file(GLOB SOURCES src/*.cpp src/cpp/*.cpp)
 
 # Declare the -std=c++17
 set(CMAKE_CXX_STANDARD 17)
