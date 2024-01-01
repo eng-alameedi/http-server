@@ -32,7 +32,7 @@ add_executable(${Bin_name} ${SOURCES})
 target_include_directories(${Bin_name} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 # Set the Compiler Flags options for release and debug
 if(CMAKE_BUILD_TYPE MATCHES Release)
-  target_compile_options(${Bin_name} INTERFACE -O3 -DNDEBUG)
+  target_compile_options(${Bin_name} INTERFACE -o3 -DNDEBUG)
 elseif(CMAKE_BUILD_TYPE MATCHES Debug)
   target_compile_options(${Bin_name} INTERFACE -g)
 endif()
