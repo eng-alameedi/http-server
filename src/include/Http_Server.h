@@ -16,4 +16,6 @@ void bind_socket();
 //! Function to listen to socket
 void listen_socket();
 
+void accept();
+
 #endif  //! _HTTP_SERVER_H_
